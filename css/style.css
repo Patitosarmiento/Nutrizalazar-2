@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Roboto:ital,wght@0,400;1,100;1,300&display=swap');
+
+/* comienzo a crear mobile first */
+
+*{
+padding: 0px;
+margin: 0px;
+}
+
+body{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(237, 241, 243);
+}
+
+.flexbar{
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: normal;
+    padding: 20px;
+    background-color: rgb(246, 180, 220);
+    margin: 0px;
+}
+
+.intro{
+    grid-area: intro;
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 10px;
+}
+
+.colornav{
+    font-size: 20px;
+}
+
+/* PIE DE PAGINA */
+footer{
+    background-color: rgb(143, 208, 200);
+    margin-bottom: 0;
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.socialmedia{
+    background-color: rgb(143, 208, 200);
+    padding: 0px;
+    margin: 0px;
+}
+.mensajefooter{
+    color: aliceblue;
+}
+
+/* Declaro areas */
+.intro{
+    grid-area: intro;
+}
+.titulo{
+    grid-area: titulo;
+}
+.barra{
+    grid-area: barra;
+}
+.contenido{
+    grid-area: contenido;
+}
+.presentacion{
+    grid-area: contenido1;
+}
+.equipo{
+    grid-area: contenido1;
+}
+.contenido-uno{
+    grid-area: contenido1;
+}
+.contenido-dos{
+    grid-area: contenido2;
+}
+.contenido-tres{
+    grid-area: contenido3;
+}
+footer{
+    grid-area: footer;
+}
+
+/* DESPLIEGO GRID */
+
+.grillatotal, .contenido, footer{
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "barra"
+    "intro"
+    "contenido1"
+    "contenido2"
+    "contenido3"
+    "footer";
+}
+.contenido-servicios{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenido-uno, .contenido-dos, .contenido-tres, .presentacion{
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+.card{
+    padding: 10px;
+}
+
+@media (min-width: 500px) {
+
+    .intro, .grillatotal, .contenido, footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "intro intro"
+        "presentacion presentacion"
+        "contenido1 contenido2"
+        "contenido3 contenido3"
+        "footer footer";
+    }
+
+}
+
+
+
+
+
+
+
+
